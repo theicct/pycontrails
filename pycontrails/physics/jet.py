@@ -544,6 +544,7 @@ def initial_aircraft_mass(
     reserve_fuel_requirements
     aircraft_load_factor
     """
+    load_factor = float(np.unique(load_factor))
     tom = operating_empty_weight + load_factor * max_payload + total_fuel_burn + total_reserve_fuel
     return min(tom, max_takeoff_weight)
 
